@@ -12,7 +12,7 @@
       <option
         v-for="option in options"
         :key="`option-${option.value}`"
-        :value="option.value"
+        :value="option.text"
       >
         {{ option.text }}
       </option>
