@@ -200,7 +200,6 @@ export default {
         { text: "Indoor", value: 1 },
         { text: "Outdoor", value: 2 },
       ],
-      errors: {},
     };
   },
 };
