@@ -7,7 +7,9 @@
       @change="$emit('update:modelValue', $event.target.checked)"
       v-bind="$attrs"
     />
-    <label v-bind="labelFor" class="form-check-label text-light">{{ label }}</label>
+    <label v-bind="labelFor" class="form-check-label text-light">{{
+      label
+    }}</label>
   </div>
 </template>
 
@@ -25,9 +27,9 @@ export default {
     },
   },
   computed: {
-      labelFor() {
-        return this.$attrs.id ? { for: this.$attrs.id } : {};
-      },
+    labelFor() {
+      return this.$attrs.id ? { for: this.$attrs.id } : {};
     },
+  },
 };
 </script>

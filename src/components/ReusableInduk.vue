@@ -149,7 +149,7 @@
             <td>{{ product.Ketentuan }}</td>
           </tr>
           <tr>
-            <th style="width: 25%">Publish :</th>
+            <th style="width: 25%">Simpan :</th>
             <td>{{ product.Simpan }}</td>
           </tr>
         </table>
