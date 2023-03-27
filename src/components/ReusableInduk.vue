@@ -8,6 +8,7 @@
             type="text"
             v-model="product.name"
             label="Nama Pemesan"
+            placeholder="Masukkan nama anda"
             id="product-nama"
           >
           </base-input>
@@ -15,6 +16,7 @@
             type="text"
             v-model="product.NoHp"
             label="No Hp/WA"
+            placeholder="Masukkan No Hp"
             id="Data-NoHp"
           >
           </base-input>
@@ -38,6 +40,7 @@
             <textarea
               class="form-control"
               rows="6"
+              placeholder="Tambahkan keterangan"
               :value="product.description"
               @input="product.description = $event.target.value"
             >
@@ -49,6 +52,7 @@
             type="date"
             v-model="product.Date"
             label="Tanggal"
+            placeholder="Tentukan tanggal"
             id="Data-Date"
           >
           </base-input>
@@ -163,10 +167,10 @@ export default {
   data() {
     return {
       product: {
-        name: "Masukkan Nama Anda",
-        Date: "0000-00-00",
-        description: "Keterangan Tambahan",
-        NoHp: "Masukkan No Telephone",
+        name: "",
+        Date: "",
+        description: "",
+        NoHp: "",
         At: "",
         TipeL: "",
         Simpan: "true",
