@@ -11,7 +11,7 @@
         <input
           class="form-check-input"
           type="checkbox"
-          :value="option.value"
+          :value="option.text"
           :checked="isChecked(option.value)"
           @change="handleChange"
           :id="`${id}-${index}`"
