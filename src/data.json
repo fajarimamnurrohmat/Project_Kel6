@@ -1,35 +1,50 @@
 {
   "pelanggan": [
     {
-      "name": "",
-      "NoHp": "",
-      "MenuM": "",
-      "JumlahM": "",
-      "porsi": "",
-      "MenuMin": "",
-      "JumlahMin": "",
-      "description": "",
-      "Temp": [],
-      "Ketentuan": "",
-      "Simpan": false,
-      "id": "1"
+      "name": "Ivan Fadli Kurniawan",
+      "NoHp": "0895600627471",
+      "MenuM": "Nasi Goreng ",
+      "JumlahM": "2",
+      "porsi": "Jumbo",
+      "MenuMin": "Es Jeruk",
+      "JumlahMin": "2",
+      "description": "yg enak",
+      "Temp": [
+        "Bayar di Warung"
+      ],
+      "Ketentuan": "1",
+      "Simpan": true,
+      "id": "ykhf3yH"
     },
-    [
-      {
-        "name": "Fajar imam  ",
-        "NoHp": "",
-        "MenuM": "",
-        "JumlahM": "",
-        "porsi": "",
-        "MenuMin": "Es Teh",
-        "JumlahMin": "",
-        "description": "",
-        "Temp": [
-          "Bayar di Warung"
-        ],
-        "Ketentuan": "",
-        "Simpan": true
-      }
-    ]
+    {
+      "name": "Syikha",
+      "NoHp": "056244789",
+      "MenuM": "Nasi Goreng ",
+      "JumlahM": "1",
+      "porsi": "Jumbo",
+      "MenuMin": "Es Jeruk",
+      "JumlahMin": "1",
+      "description": "Sumer",
+      "Temp": [],
+      "Ketentuan": "1",
+      "Simpan": true,
+      "id": "rmpf0wW"
+    },
+    {
+      "name": "Fajar imam  ",
+      "NoHp": "082334513334",
+      "MenuM": "Nasi Mawut ",
+      "JumlahM": "2",
+      "porsi": "Jumbo",
+      "MenuMin": "Teh Hangat",
+      "JumlahMin": "2",
+      "description": "Sumer semua",
+      "Temp": [
+        "Transfer"
+      ],
+      "Ketentuan": "1",
+      "Simpan": true,
+      "id": "Uh7deZ6"
+    }
   ]
 }

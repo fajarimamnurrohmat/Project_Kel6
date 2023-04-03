@@ -110,8 +110,9 @@
       </div>
     </div>
   </div>
+  <br>
   <div>
-    <h4 class="border-bottom">Data Pemesan Nasi Goreng</h4>
+    <h4 class="border-bottom">Keranjang Anda</h4>
     <table class="table table-bordered table-striped">
       <thead class="bg-primary">
         <tr>
@@ -201,21 +202,22 @@ export default {
         { text: "Jumbo", value: 2 },
       ],
       dataList: [],
+      tempData: {},
     };
   },
   methods: {
     saveData() {
       if (this.Data.Simpan) {
+        this.tempData = Object.assign({}, this.Data);
         this.dataList.push(this.Data);
         this.Data = {
           name: "",
           NoHp: "",
-          MenuM: "",
-          JumlahM: "",
-          Porsi: "",
-          MenuMin: "",
-          JumlahMin: "",
+          suasana: "",
+          TipeL: "",
           description: "",
+          Date: "",
+          At: "",
           Temp: [],
           Ketentuan: "",
           Simpan: false,
@@ -229,7 +231,6 @@ export default {
     del(item) {
       this.dataList.splice(this.dataList.indexOf(item), 1);
       axios
-        .delete("http://localhost:3000/pelanggan/" + item.id)
         .then((response) => {
           console.log(response);
         })
@@ -238,9 +239,20 @@ export default {
         });
     },
     save() {
-      // implementasi kode untuk mengirim data ke server di sini
       axios
-        .post("http://localhost:3000/pelanggan/", this.dataList)
+        .post("http://localhost:3000/pelanggan/", this.tempData)
+        .then((res) => {
+          // handle successful response here
+          this.tempData = {};
+          setTimeout(() => {
+            location.reload();
+          }, 500);
+          alert("Data berhasil disimpan!");
+        })
+        .catch((err) => {
+          // handle error response here
+          console.log(err);
+        });
     },
   },
 };

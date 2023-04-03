@@ -13,7 +13,22 @@
     <title>NASI GORENG PAK JAWIR</title>
   </head>
   <body>
+    <button onclick="admin()" id="switch" class="bg-primary">Switch➡</button>
     <div id="app"></div>
+    <div id="app1"></div>
     <script type="module" src="/src/main.js"></script>
+    <script>
+      userPage() ;
+      function admin() {
+        document.getElementById("app1").style.display = "none";
+        document.getElementById("app").style.display = "flex";
+        document.getElementById("switch").setAttribute("onclick", "userPage()");
+      }
+      function userPage() {
+        document.getElementById("app").style.display = "none" ;
+        document.getElementById("app1").style.display = "block" ;
+        document.getElementById("switch").setAttribute("onclick", "admin()");
+      }
+    </script>
   </body>
 </html>

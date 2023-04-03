@@ -7,16 +7,16 @@ import BaseRadio from './components/form/BaseRadio.vue';
 import BaseRadioGroup from './components/form/BaseRadioGroup.vue';
 import BaseCheckbox from './components/form/BaseCheckbox.vue';
 import BaseCheckboxGroup from './components/form/BaseCheckboxGroup.vue';
-import crud from './components/crudview.vue';
+import crud from './components/crudview.vue' ;
 
-createApp(crud).mount("#app");
-
-const app = createApp(ReusableInduk);
-app
-    .component("base-input", BaseInput)
-    .component("base-select", BaseSelect)
-    .component("base-radio", BaseRadio)
-    .component("base-radio-group", BaseRadioGroup)
-    .component("base-checkbox", BaseCheckbox)
-    .component("base-checkbox-group", BaseCheckboxGroup);
-app.mount("#app1");
+function switchRole() {
+    const app = createApp(ReusableInduk);
+    app
+      .component("base-input", BaseInput)
+      .component("base-select", BaseSelect)
+      .component("base-radio", BaseRadio)
+      .component("base-radio-group", BaseRadioGroup)
+      .component("base-checkbox", BaseCheckbox)
+      .component("base-checkbox-group", BaseCheckboxGroup);
+    app.mount("#app1");
+  }
