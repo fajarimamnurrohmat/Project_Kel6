@@ -1,17 +1,33 @@
 {
   "pelanggan": [
     {
-      "name": "",
-      "NoHp": "",
-      "suasana": "",
-      "TipeL": "",
-      "description": "",
-      "Date": "",
-      "At": "",
+      "name": "Ivan Fadli Kurniawan",
+      "NoHp": "0895600627471",
+      "MenuM": "Nasi Goreng ",
+      "JumlahM": "2",
+      "porsi": "Jumbo",
+      "MenuMin": "Es Jeruk",
+      "JumlahMin": "2",
+      "description": "yg enak",
+      "Temp": [
+        "Bayar di Warung"
+      ],
+      "Ketentuan": "0",
+      "Simpan": true
+    },
+    {
+      "name": "Syikha",
+      "NoHp": "056244789",
+      "MenuM": "Nasi Goreng ",
+      "JumlahM": "1",
+      "porsi": "Jumbo",
+      "MenuMin": "Es Jeruk",
+      "JumlahMin": "1",
+      "description": "lll",
       "Temp": [],
-      "Ketentuan": "",
-      "Simpan": false,
-      "id": "6lmKIL-"
+      "Ketentuan": "1",
+      "Simpan": true,
+      "id": "rmpf0wW"
     }
   ]
 }
