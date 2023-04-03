@@ -157,6 +157,8 @@
   </div>
 </template>
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
@@ -226,9 +228,20 @@ export default {
     },
     del(item) {
       this.dataList.splice(this.dataList.indexOf(item), 1);
+      axios
+        .delete("http://localhost:3000/pelanggan/" + item.id)
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
+
     save() {
       // implementasi kode untuk mengirim data ke server di sini
+      axios
+        .post("http://localhost:3000/pelanggan/", this.dataList)
     },
   },
 };
