@@ -1,0 +1,35 @@
+{
+  "pelanggan": [
+    {
+      "name": "",
+      "NoHp": "",
+      "MenuM": "",
+      "JumlahM": "",
+      "porsi": "",
+      "MenuMin": "",
+      "JumlahMin": "",
+      "description": "",
+      "Temp": [],
+      "Ketentuan": "",
+      "Simpan": false,
+      "id": "1"
+    },
+    [
+      {
+        "name": "Fajar imam  ",
+        "NoHp": "",
+        "MenuM": "",
+        "JumlahM": "",
+        "porsi": "",
+        "MenuMin": "Es Teh",
+        "JumlahMin": "",
+        "description": "",
+        "Temp": [
+          "Bayar di Warung"
+        ],
+        "Ketentuan": "",
+        "Simpan": true
+      }
+    ]
+  ]
+}
