@@ -110,7 +110,7 @@
       </div>
     </div>
   </div>
-  <br>
+  <br />
   <div>
     <h4 class="border-bottom">Keranjang Anda</h4>
     <table class="table table-bordered table-striped">
@@ -215,7 +215,7 @@ export default {
           NoHp: "",
           MenuM: "",
           JumlahM: "",
-          porsi:"",
+          porsi: "",
           MenuMin: "",
           JumlahMin: "",
           description: "",
@@ -240,6 +240,11 @@ export default {
         });
     },
     save() {
+      if (!this.tempData || Object.keys(this.tempData).length === 0) {
+        alert("Data harus diisi terlebih dahulu sebelum disimpan.");
+        return;
+      }
+
       axios
         .post("http://localhost:3000/pelanggan/", this.tempData)
         .then((res) => {
