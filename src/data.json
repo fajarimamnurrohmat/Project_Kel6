@@ -45,6 +45,38 @@
       "Ketentuan": "1",
       "Simpan": true,
       "id": "Uh7deZ6"
+    },
+    {
+      "name": "Dika",
+      "NoHp": "089776667778",
+      "MenuM": "Nasi Mawut ",
+      "JumlahM": "3",
+      "porsi": "Biasa",
+      "MenuMin": "Es Teh",
+      "JumlahMin": "3",
+      "description": "pedes",
+      "Temp": [
+        "Bayar di Warung"
+      ],
+      "Ketentuan": "1",
+      "Simpan": true,
+      "id": "cWRG40d"
+    },
+    {
+      "name": "Ida",
+      "NoHp": "082334455567",
+      "MenuM": "Nasi Mawut ",
+      "JumlahM": "2",
+      "porsi": "Jumbo",
+      "MenuMin": "Teh Hangat",
+      "JumlahMin": "2",
+      "description": "tidak pedas",
+      "Temp": [
+        "Bayar di Warung"
+      ],
+      "Ketentuan": "",
+      "Simpan": true,
+      "id": "7IU4e0-"
     }
   ]
 }

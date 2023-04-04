@@ -202,7 +202,7 @@ export default {
         { text: "Jumbo", value: 2 },
       ],
       dataList: [],
-      tempData: {},
+      tempData: [],
     };
   },
   methods: {
@@ -213,11 +213,12 @@ export default {
         this.Data = {
           name: "",
           NoHp: "",
-          suasana: "",
-          TipeL: "",
+          MenuM: "",
+          JumlahM: "",
+          porsi:"",
+          MenuMin: "",
+          JumlahMin: "",
           description: "",
-          Date: "",
-          At: "",
           Temp: [],
           Ketentuan: "",
           Simpan: false,
@@ -243,7 +244,7 @@ export default {
         .post("http://localhost:3000/pelanggan/", this.tempData)
         .then((res) => {
           // handle successful response here
-          this.tempData = {};
+          this.tempData = [];
           setTimeout(() => {
             location.reload();
           }, 500);
