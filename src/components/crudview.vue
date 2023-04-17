@@ -1,9 +1,10 @@
 <template>
-    <div>
-      <h1>ADMIN PAGE</h1>
-      <hr>
+  <div>
+    <h2>ADMIN PAGE</h2>
+    <hr />
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
-        <thead class="bg-primary">
+        <thead class="bg-info">
           <tr>
             <th>No</th>
             <th>Nama Pemesan</th>
@@ -39,64 +40,63 @@
         </tbody>
       </table>
     </div>
-  </template>
-  
-  <script>
-  import axios from "axios";
-  export default {
-    data() {
-      return {
-        form: {
-          id: "",
-          nama: "",
-          hp: "",
-          makanan: "",
-          jmlMakanan: "",
-          porsi: "",
-          minuman: "",
-          jmlMinuman: "",
-          keterangan: "",
-          pembayaran: "",
-          kartuMember: "",
-        },
-        pelanggan: [],
-        updateSubmit: false,
-      };
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+export default {
+  data() {
+    return {
+      form: {
+        id: "",
+        nama: "",
+        hp: "",
+        makanan: "",
+        jmlMakanan: "",
+        porsi: "",
+        minuman: "",
+        jmlMinuman: "",
+        keterangan: "",
+        pembayaran: "",
+        kartuMember: "",
+      },
+      pelanggan: [],
+      updateSubmit: false,
+    };
+  },
+  mounted() {
+    this.load();
+  },
+  methods: {
+    load() {
+      axios
+        .get("http://localhost:3000/pelanggan")
+        .then((res) => {
+          this.pelanggan = res.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
-    mounted() {
-      this.load();
-    },
-    methods: {
-      load() {
+    del(item) {
+      const confirmDelete = confirm("Data dihapus ?");
+      if (confirmDelete) {
         axios
-          .get("http://localhost:3000/pelanggan")
-          .then((res) => {
-            this.pelanggan = res.data;
+          .delete("http://localhost:3000/pelanggan/" + item.id)
+          .then((response) => {
+            console.log(response);
+            const index = this.pelanggan.indexOf(item);
+            if (index > -1) {
+              this.pelanggan.splice(index, 1);
+            }
           })
-          .catch((err) => {
-            console.log(err);
+          .catch((error) => {
+            console.log(error);
+            alert("Failed to delete item. Please try again later.");
           });
-      },
-      del(item) {
-        const confirmDelete = confirm(
-          "Data dihapus ?"
-        );
-        if (confirmDelete) {
-          axios
-            .delete("http://localhost:3000/pelanggan/" + item.id)
-            .then((response) => {
-              console.log(response);
-              const index = this.pelanggan.indexOf(item);
-              if (index > -1) {
-                this.pelanggan.splice(index, 1);
-              }
-            })
-            .catch((error) => {
-              console.log(error);
-              alert("Failed to delete item. Please try again later.");
-            });
-        }
-      },
+      }
     },
-  };
-  </script>
+  },
+};
+</script>

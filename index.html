@@ -10,25 +10,16 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <title>NASI GORENG PAK JAWIR</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <title>Nasi Goreng Mbk Indah</title>
   </head>
   <body>
-    <button onclick="admin()" id="switch" class="bg-primary">Switch➡</button>
     <div id="app"></div>
-    <div id="app1"></div>
     <script type="module" src="/src/main.js"></script>
-    <script>
-      userPage() ;
-      function admin() {
-        document.getElementById("app1").style.display = "none";
-        document.getElementById("app").style.display = "flex";
-        document.getElementById("switch").setAttribute("onclick", "userPage()");
-      }
-      function userPage() {
-        document.getElementById("app").style.display = "none" ;
-        document.getElementById("app1").style.display = "block" ;
-        document.getElementById("switch").setAttribute("onclick", "admin()");
-      }
-    </script>
   </body>
 </html>
