@@ -32,6 +32,20 @@
               </router-link>
             </li>
           </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <router-link to="/auth/login" class="nav-link">
+                <i class="fas fa-sign-in-alt mr-2"></i>
+                Login
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link :to="{ name: 'auth.register' }" class="nav-link">
+                <i class="fas fa-user-plus mr-2"></i>
+                Register
+              </router-link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
