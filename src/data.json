@@ -46,5 +46,20 @@
       "Simpan": true,
       "id": "Uh7deZ6"
     }
+  ],
+  "users": [
+    {
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "mypassword",
+      "password_confirm": "mypassword"
+    },
+    {
+      "id": "4746c6f1-86ae-453e-988e-1f09fca5108c",
+      "name": "Fajar Imam",
+      "email": "fajarimam767@gmail.com",
+      "password": "Dijm.1212",
+      "password_confirm": "Dijm.1212"
+    }
   ]
 }
