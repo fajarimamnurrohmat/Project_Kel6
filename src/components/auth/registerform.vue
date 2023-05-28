@@ -80,6 +80,12 @@ export default {
     handleSubmit() {
       this.errors = {};
 
+      if (this.user.password !== this.user.password_confirm) {
+        this.errors.password_confirm =
+          "Password dan Konfirmasi Password tidak sama";
+        return;
+      }
+
       const newData = {
         id: createId(),
         name: this.user.name,

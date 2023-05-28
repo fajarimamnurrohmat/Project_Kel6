@@ -27,12 +27,6 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/User">
-                <i class="fas fa-user-circle mr-2"></i>
-                User Page
-              </router-link>
-            </li>
-            <li class="nav-item">
               <router-link class="nav-link" :to="{ name: 'Admin' }">
                 <i class="fas fa-cogs mr-2"></i>
                 Admin Page

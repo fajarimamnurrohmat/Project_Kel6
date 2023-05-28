@@ -5,6 +5,7 @@ import Admin from "../components/crudview.vue";
 import AuthView from "../components/auth/authview.vue";
 import LoginForm from "../components/auth/loginform.vue";
 import RegisterForm from "../components/auth/registerform.vue";
+
 const routes = [
   {
     path: "/Home",
@@ -38,8 +39,10 @@ const routes = [
     ],
   },
 ];
+
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
 export default router;
